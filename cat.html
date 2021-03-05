@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="source/catStyle.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Бабуленькины котятки</h1>
+    </header>
+    <section class="main">
+      <input id="all" type="radio" name="cat_type" checked />
+      <input id="abis" type="radio" name="cat_type" />
+      <input id="brit" type="radio" name="cat_type" />
+      <input id="rus" type="radio" name="cat_type" />
+      <input id="siam" type="radio" name="cat_type" />
+      <div class="cat-type">
+        <ul>
+          <li>
+            <label class="cat-name main-selector" for="all">Все породы</label>
+          </li>
+          <li><label class="cat-name" for="abis">Абиссинская</label></li>
+          <li><label class="cat-name" for="brit">Британская</label></li>
+          <li><label class="cat-name" for="rus">Русская голубая</label></li>
+          <li><label class="cat-name" for="siam">Сиамская</label></li>
+        </ul>
+      </div>
+      <div class="cat-gallery">
+        <div data-name="Гоша, 42 года">
+          <img src="./catPic/small_cat.png" alt="abis" />
+        </div>
+        <div data-name="Саня, 45 верни сотку">
+          <img src="./catPic/medium_cat.png" alt="brit" />
+        </div>
+        <div data-name="Степан, 45 лет">
+          <img src="./catPic/small_cat2.png" alt="rus" />
+        </div>
+        <div data-name="Влад, 45 лет">
+          <img src="./catPic/small_cat3.png" alt="rus" />
+        </div>
+        <div data-name="Света, 45 лет">
+          <img src="./catPic/small_cat4.png" alt="brit" />
+        </div>
+        <div data-name="Самир, 8 лет">
+          <img src="./catPic/medium_cat2.png" alt="siam" />
+        </div>
+        <div data-name="Даша, 2 месяца">
+          <img src="./catPic/small_cat5.png" alt="siam" />
+        </div>
+        <div data-name="Кот, много лет">
+          <img src="./catPic/large_cat.png" alt="brit" />
+        </div>
+      </div>  
+      <div class="rank-wraper">
+        <h2>РЕЙТИНГ</h2>
+        <label class="checkbox" for="sort">по убыванию:</label>
+        <input class="checkbox" id="sort" type="checkbox" />
+        <div.rank-wrap class="cat-rank">
+          <div data-score="6" class="cat-name rank-box">
+            <p class="score-name">Абиссинская</p>
+            <div class="slider" data-score="4"></div>
+          </div>
+  
+          <div data-score="8" class="cat-name rank-box">
+            <p class="score-name">Британская</p>
+            <div class="slider" data-score="8"></div>
+          </div>
+          <div data-score="2" class="cat-name rank-box">
+            <p class="score-name">Русская голубая</p>
+            <div class="slider" data-score="2"></div>
+          </div>
+          <div data-score="10" class="cat-name rank-box">
+            <p class="score-name">Сиамская</p>
+            <div class="slider"></div>
+          </div>
+        </div>
+      </div>  
+    </section>
+    <div class="spacer"></div>
+    <footer>
+      <hr />
+      <article class="footer-info">
+        <p>ООО Бабуленькины котятки, 2020</p>
+        <a href="" class="footer-adress">Наш адрес: улица Котовая, д.5</a>
+      </article>
+    </footer>
+    
+  </body>
+</html>
