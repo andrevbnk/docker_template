@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  font-family: Verdana, Arial, sans-serif;
+  background-color: white;
+}
+header {
+  margin-top: 70px;
+}
+header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 50px 50px 50px 50px;
+  clear: both;
+  text-align: center;
+}
+.main__nav {
+  background-color: #eee;
+  border-bottom: 2px solid #66cc00;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.main__nav ul {
+  text-align: center;
+}
+
+.main__nav li {
+  display: inline;
+  list-style: none;
+}
+
+.main__nav a {
+  display: inline-block;
+  color: black;
+  padding: 25px 25px 25px;
+  text-decoration: none;
+  border-right: 2px solid #66cc00;
+  border-left: 2px solid #66cc00;
+}
+
+.main__nav a:hover {
+  color: white;
+  background-color: black;
+}
+
+.main__nav:after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+.nav__home {
+  font-weight: bold;
+}
+.main {
+  background-color: #eee;
+  border: 2px solid #66cc00;
+  border-radius: 20px;
+}
+
+.main__menu h2 {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 10px 10px 10px;
+  border-bottom: 2px solid #66cc00;
+  text-align: center;
+}
+
+.main__menu {
+  float: right;
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid #66cc00;
+  border-radius: 10px;
+  background-color: #ccff66;
+  width: 300px;
+}
+
+.main__menu li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 10px;
+  text-align: center;
+}
+
+.main__menu a {
+  text-decoration: none;
+  color: #666666;
+  padding: 4px;
+}
+
+.main__menu a:hover {
+  color: white;
+  border-radius: 10px;
+  background-color: #66cc00;
+}
+
+.line {
+  border-bottom: 2px solid #66cc00;
+  width: 170px;
+  margin: auto;
+}
+.content__text p {
+  margin-top: 10px;
+  padding: 10px 30px 10px 30px;
+  line-height: 130%;
+}
+
+.footer {
+  font-size: 0.8em;
+  text-align: center;
+  padding: 10px 10px 30px 10px;
+}
+
+#nav ul,
+.header h1,
+.main,
+.footer p {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main,
+#nav,
+.header,
+.footer {
+  min-width: 968px;
+}

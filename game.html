@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="source/game/style.css" />
+  </head>
+  <body><header class="header"><h1 class="header__title">Загадка Жака Фреско</h1></header>
+    <div class="main">
+      <section class="main__board">
+        <div class="board__card hidden">
+          <div class="card__suit"></div>
+          <div class="card__face"></div>
+        </div>
+      </section>
+      <div class="main__timer">00:30</div>
+      <div class="main__score hidden">
+        <div class="score__background"></div>
+        <div class="score__info">
+          <h1 class="info__header"></h1>
+          <button class="info__button"></button>
+        </div>
+      </div>
+      <script src="source/game/boardLogic.js"></script>
+    </div>
+  </body>
+</html>

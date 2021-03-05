@@ -1,0 +1,222 @@
+body,
+div,
+h1,
+h2,
+hr,
+p,
+ul {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+input[type='radio'] {
+  display: none;
+}
+ul {
+  list-style: none;
+}
+img {
+  background-color: white;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+body {
+  min-width: 800px;
+  background-color: gainsboro;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+  display: flex;
+  flex-direction: column;
+}
+header h2 {
+  align-self: flex-start;
+  color: rgb(214, 82, 82);
+  padding: 10px;
+  background-color: white;
+}
+header h1 {
+  align-self: center;
+}
+.spacer {
+  flex: 1;
+}
+.footer-info {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-info p {
+  margin: 10px;
+}
+.footer-adress {
+  text-decoration: none;
+  color: rgb(43, 43, 196);
+}
+.main {
+  display: flex;
+  margin: 40px;
+  justify-content: center;
+}
+.cat-name {
+  white-space: nowrap;
+  padding: 15px;
+  font-size: larger;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.main-selector {
+  font-size: 150%;
+  font-weight: bolder;
+}
+.cat-type {
+  overflow: hidden;
+  background-color: aliceblue;
+  flex-basis: 15%;
+}
+.cat-type label {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.cat-type li {
+  border-bottom: 2px solid grey;
+}
+.cat-type li:hover {
+  color: white;
+  background-color: gray;
+}
+.cat-gallery {
+  flex-basis: 60%;
+  margin: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.cat-gallery div {
+  position: relative;
+}
+.cat-gallery div:hover::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  padding: 0.5em;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 24px;
+  content: attr(data-name);
+}
+.cat-gallery div:nth-child(8n + 2),
+.cat-gallery div:nth-child(8n + 6) {
+  grid-column: auto/span 2;
+}
+
+.cat-gallery div:nth-child(8n) {
+  grid-column: auto/span 3;
+}
+
+#abis:checked ~ .cat-gallery img:not([alt='abis']),
+#brit:checked ~ .cat-gallery img:not([alt='brit']),
+#rus:checked ~ .cat-gallery img:not([alt='rus']),
+#siam:checked ~ .cat-gallery img:not([alt='siam']) {
+  opacity: 0.4;
+}
+#all:checked ~ .cat-type label[for='all'],
+#abis:checked ~ .cat-type label[for='abis'],
+#brit:checked ~ .cat-type label[for='brit'],
+#rus:checked ~ .cat-type label[for='rus'],
+#siam:checked ~ .cat-type label[for='siam'] {
+  color: white;
+  background-color: gray;
+}
+.rank-wraper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px;
+  background-color: aliceblue;
+  align-self: flex-start;
+  flex-basis: 20%;
+}
+.cat-rank {
+  display: flex;
+  flex-direction: column;
+}
+.rank-wraper h2 {
+  color: rgb(214, 82, 82);
+  padding: 10px 10px 0 10px;
+}
+.checkbox {
+  align-self: flex-end;
+}
+.rank-box {
+  position: relative;
+}
+.score-name {
+  margin-bottom: 5px;
+}
+.slider {
+  height: 20px;
+  width: 70%;
+  position: absolute;
+  background-color: green;
+}
+.score {
+  position: absolute;
+  font-weight: bolder;
+  right: 0;
+}
+.cat-rank .rank-box[data-score='1'] .slider,
+.cat-rank .rank-box[data-score='2'] .slider {
+  width: 10%;
+  background-color: rgb(196, 32, 32);
+}
+.cat-rank .rank-box[data-score='3'] .slider,
+.cat-rank .rank-box[data-score='4'] .slider,
+.cat-rank .rank-box[data-score='5'] .slider,
+.cat-rank .rank-box[data-score='6'] .slider {
+  width: 25%;
+  background-color: rgb(255, 196, 0);
+}
+.rank-box::after {
+  display: block;
+  position: absolute;
+  right: 0;
+  font-weight: bolder;
+  font-size: 20px;
+  content: attr(data-score);
+}
+#sort:checked ~ .cat-rank .rank-box[data-score='1'] {
+  order: 10;
+}
+#sort:checked ~ .cat-rank .rank-box[data-score='2'] {
+  order: 9;
+}
+#sort:checked ~ .cat-rank .rank-box[data-score='3'] {
+  order: 8;
+}
+#sort:checked ~ .cat-rank .rank-box[data-score='4'] {
+  order: 7;
+}
+#sort:checked ~ .cat-rank .rank-box[data-score='5'] {
+  order: 6;
+}
+#sort:checked ~ .cat-rank .rank-box[data-score='6'] {
+  order: 5;
+}
+#sort:checked ~ .cat-rank .rank-box[data-score='7'] {
+  order: 4;
+}
+#sort:checked ~ .cat-rank .rank-box[data-score='8'] {
+  order: 3;
+}
+#sort:checked ~ .cat-rank .rank-box[data-score='9'] {
+  order: 2;
+}
+#sort:checked ~ .cat-rank .rank-box[data-score='10'] {
+  order: 1;
+}

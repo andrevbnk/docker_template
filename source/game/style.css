@@ -1,0 +1,147 @@
+div,
+body,
+img,
+h1,
+p,
+span {
+  box-sizing: border-box;
+  display: block;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  color: #434344;
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #cfd0cf;
+}
+.header {
+  margin: 40px 0px;
+}
+.header__title {
+  text-align: center;
+  line-height: 47px;
+  font-size: 42px;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main__board {
+  perspective: 600px;
+  display: grid;
+  grid-template-columns: 130px 130px 130px 130px;
+  grid-template-rows: 130px 130px 130px;
+  gap: 25px;
+}
+.board__card {
+  font-size: 75px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.board__card:hover {
+  cursor: pointer;
+}
+.rotated {
+  transform: rotateY(180deg);
+}
+.card__suit,
+.card__face {
+  border-radius: 9px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.card__suit {
+  border: 5px solid white;
+  background-image: linear-gradient(to bottom left, #22ab93, #19668d);
+  transform: rotateY(0deg);
+}
+.card__face {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  transform: rotateY(180deg);
+}
+.succesPair {
+  background-color: #5ad66f;
+}
+.failedPair {
+  background-color: #f44336;
+}
+.noClick {
+  pointer-events: none;
+}
+.hidden {
+  display: none;
+}
+.main__timer {
+  margin: 30px;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 550;
+}
+
+.score__background {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.score__info {
+  min-width: 350px;
+  padding: 30px 0px;
+  background-color: white;
+  border-radius: 9px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.info__header {
+  font-size: 48px;
+  display: flex;
+}
+.animatedLetter {
+  position: relative;
+  animation: letterBounce 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+@keyframes letterBounce {
+  50% {
+    transform: translateY(-15px) scaleY(1.3);
+  }
+}
+.info__button {
+  border: none;
+  outline: none;
+  border-radius: 9px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  margin-top: 40px;
+  height: 40px;
+  padding: 0 30px;
+  font-size: 20px;
+  font-weight: 550;
+  color: white;
+  background-image: linear-gradient(to left, #22ab93, #19668d);
+}
+.info__button:hover {
+  cursor: pointer;
+  box-shadow: none;
+}
+.info__button:active {
+  box-shadow: inset 2px 1px 8px rgba(0, 0, 0, 0.5);
+  color: rgb(236, 236, 236);
+}
